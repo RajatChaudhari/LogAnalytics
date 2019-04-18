@@ -1,0 +1,230 @@
+Message class,Message text,Resolution,Engie,Mars,Lufthansa,Daimler,Category,MClassCode
+BF00,Bank <bank number> does not exist,"Make sure Bank information (BSEC-BANKN, BANKL, BANKS, IBAN) is cleared in CPD vendor/customer position.",0,0,1,1,144,1
+BK,Assign a number range to business transaction &.,need to assign number range of Co document in tcode KANK,1,0,0,0,75,2
+BP,Bank Details missing ,"This error occurrs for STAR rollout , generally in STAR rollout we need to create a ONE TIME Vendor/Customer, which not gets created by BP automation tool. As it requires external number range. We need to create it manually , its hardly one or two the number range we provide as TAXXXXXXXX and validated in LFA1 or KNA1 table there is one time vendor tick",1,0,0,0,69,3
+BS,System status ** is active (**),This error results due to closed status of target IO. Target IO need to be set in Released State.,1,0,0,0,51,4
+CN,WBS element &1 has different inventory valuation,"not came into active sprint, AIF related master replication issue ",1,0,0,0,100,5
+DEFTAX_MX,Deferred tax: Do not post invoice &1 with both acquisition and other taxe,Check source tax code and its properties; it should be same if not you need to check with OT and remove target tax code from tax code properties.,1,0,0,0,76,6
+E!,"Currency ""**"" is expiring; from **, use currency ""**""",Warning and error date needs to be extend / Remove for expiring currency from T code OEXW,1,0,0,0,53,7
+F2,Payment block ** is not defined,From FI point of view Payment block needs to be created in system. From CFIN point of view also check mapping actions assigned for payment block and assign correct mapping action accordingly,1,0,0,0,58,8
+F2,Payment block <payment block indicator> is not defined,Define Payment Block in OB27,0,0,1,1,58,8
+F2,Payment block <payment block indicator> is not defined,Define Payment Block in OB27,0,0,1,1,58,8
+F4,Credit control area X has not been defined,Credit Control area activated in OBY6 configuration,0,0,1,1,152,9
+F5,Debit/credit indicator is inconsistent,OSS Note 2535203 to be implemented in the Source system & perform extraction again & then execute the FI initial load. So that the autocleared documents are not extracted again,0,1,0,0,5,10
+F5,Posting period ** ** is not open,Need to open posting period,0,1,0,0,7,10
+F5,G/L account ** is not defined in chart of accounts **,G/L account needs to be created,0,1,0,0,12,10
+F5,Vendor ** is not defined in company code **,"Related to Error F5 846, hence Not applicable",0,1,0,0,14,10
+F5,Reason code ** is not defined,"Mapping action ""to be cleared"" maintained for Reason codes",0,1,0,0,18,10
+F5,Special G/L indicator ** not defined or incorrect,"Mapping action""to be cleared"" to Special G/L indicator  ",0,1,0,0,19,10
+F5,Vendor ** has no bank details with indicator **,"Bank keys maintained in Target for few documents that were relevant for O/H postings
+Or clear BSEG-BVTYP in ""Mapping Actions""",0,1,0,0,21,10
+F5,Account ** in company code ** is not a reconciliation account,GL Mapping changed ,0,1,0,0,35,10
+F5,No alternative payer/payee defined,One Time Vendor created and mapping Changed to complete the postings,0,1,0,0,36,10
+F5,Reconciliation account ** or short key ** is not permitted,Alternative reconcilition accounts configuration updated in the Target system,0,1,0,0,38,10
+F5,Tax does not equal 0 when tax percentage rate is zero,Check the source and target tax code both should have the 0 rates and mapping should be correct if no then we will have to make this message as a warning message in OBA5,1,0,0,0,50,10
+F5,Debit/credit indicator is inconsistent,"OSS message an SAP note (2370448) was implemented as attached by Martins for INEO roll out, however the error still persist.",1,0,0,0,5,10
+F5,Customer not extended to company code,"Download the List of BP in error,fetch the Identification number for these BP from BUT0ID, check if this ID is present in the input fiel form PWC, if yes carry out the extension using BP  automation program",1,0,0,0,71,10
+F5,Vendor Not extended to Company Code,"Download the List of BP in error,fetch the Identification number for these BP from BUT0ID, check if this ID is present in the input fiel form PWC, if yes carry out the extension using BP  automation program",1,0,0,0,72,10
+F5,No special G/L acct defined for acct type &1 sp.G/L ind. &2 recon.acct &3,GL account is not maintain in spl gl configuration Tcode FBKP,1,0,0,0,77,10
+F5,The entry &2 &3 &4 is missing in table &1,"There are 2 resolution on this.
+1. Maintain the mapping action as 'Clear Data' for Withholding tax code.
+2. Maintain Substitution to clear the Withholding tax code in that perticular document using Set ID.",1,0,0,0,78,10
+F5,Complete withholding tax amount details,"There are 2 resolution on this.
+1. Maintain the mapping action as 'Clear Data' for Withholding tax code.
+2. Maintain Substitution to clear the Withholding tax code in that perticular document using Set ID.",1,0,0,0,79,10
+F5,Posting period &1 &2 is not open,"Activate Rule 12 in ZCFIN_AC_Rule table & Maintain the variable ZCFIN_BUKRS_RULE_12 in TVARV table. 
+
+",1,0,0,0,7,10
+F5,Account type & is not defined for document type &,Document type configuration (OBA7) need to enable check box of account type as per the error ,1,0,0,0,80,10
+F5,G/L account &1 is not defined in company code &2,General ledger to be created/extend at company code level ,1,0,0,0,41,10
+F5,G/L account &1 is not defined in chart of accounts &2,General ledger to be created at chart of account level ,1,0,0,0,12,10
+F5,Maximum number of items in FI reached,SNote- 2498139 has been implemented,1,0,0,0,81,10
+F5,No accts maintained for company code clearing between comp.cds & and &.,"Please check the CO objects mapping, object used in target system might be related to different company code assignment. Please correct.",1,0,0,0,82,10
+F5,No alternative payer/payee defined,Identify the alternate Payee in CFIN_ACCIT for the document in error. Update this alternate payee in BP master.,1,0,0,0,36,10
+F5,Text for posting key & not found,"Maintain Substitution to fill text as "".""  in the document line line for post keys ahving Taxt as required field using Set ID.",1,0,0,0,83,10
+F5,Dunning block &1 is not defined,maping action mainted as clear data ,1,0,0,0,84,10
+F5,Exchange rate diff.accts are not defined for account & currency &,config need to be maintain in tcode OBA1,1,0,0,0,101,10
+F5,Special G/L posting to one-time account is not defined,"in source system its not one time vendor but in its mapped to one time vendor in target system, so mapping need to be change ",1,0,0,0,102,10
+F5,Postings to account & (company code &) are only possible in currency &,need to check GL master currency ,1,0,0,0,103,10
+F5,No special G/L acct defined for acct type D sp.G/L ind. E recon.acct <account number>,Configure Special GL Account E for debitors (FBKP),0,0,1,0,77,10
+F5,Enter a name and city for one-time account postings,Apply OSS Note 2228661,0,0,1,0,108,10
+F5,Item specified for invoice reference is not an invoice item,Apply OSS Note or Correct the data in the source system (Reset Clearing and Clear again)                                                                          OSS Note No. 2260405,0,0,1,0,109,10
+F5,No alternative payer/payee defined,Apply OSS Note 2227542,0,0,1,0,36,10
+F5,Inconsistent currency information,Apply OSS Note 2226383,0,0,1,0,110,10
+F5,Debit/credit indicator is inconsistent,Check & Apply OSS Note 2034029 & 2535203,0,0,1,0,5,10
+F5,G/L Account <account> ist not defined in Chart of Account Chart of Account,"Account determination for tax Account keys should be configured usind dummy GL account DUMMYACDT, which is defined in A segment only.",0,0,1,0,112,10
+F5,Relationship between branch/head office has changed,"Check both the customers and vendors Master Data, Feild ""Head Office"" should be filled with the respective Customer/Vendor",0,0,1,0,113,10
+F5,Account type/account for invoice reference does not match item,OSS note,0,0,1,0,117,10
+F5,Balance in transaction currency,Need to raise OSS request,0,0,1,0,118,10
+F5,Consolidated companies <company code 1> and <company code 2> are different,"In T-Code OBA7, for Document Type XX ""CFIN Replication"", make sure that the Flag for ""Inter-Company postings” (section Control Data) is set.",0,0,1,1,127,10
+F5,Vendor <vendor number> is not defined in company code <company code>, Define Vendor in Company Code.,0,0,1,1,14,10
+F5,Posting period <posting period ID> <year> is not open,Company Code is to be assigned to INTL Posting Period Variant and required periods are open. Initial Load posts into the entire current FY as well as into the previous FY.,0,0,1,1,7,10
+F5,Account  <account number> in company code <company code> cannot be directly posted to,"Tere are two options in this
+1) Address the issue to the Chart of Account team. Depending on the results of the analysis, correct the attribute ""Reconciliation Account for"" in all Company Codes (= for Chart of Account globally) or in particular ones (as exceptions).
+2) Mapping needs to be changed ",0,0,1,1,130,10
+F5,Enter bank country,"Make sure Bank information (BSEC-BANKN, BANKL, BANKS, IBAN) is cleared in CPD vendor/customer position.",0,0,1,1,131,10
+F5,G/L account  <account number> is not defined in chart of accounts <chart of accounts>,"Create the account, define it in required Company Codes.",0,0,1,1,12,10
+F5,Field <field> is a required field for G/L account <account number> in <company code>,Correct FSG settings (Transaction OBC4) or assign another FSG. Align with the Chart of Account team.,0,0,1,1,134,10
+F5,Field <field> is a required field for G/L account <account number> in <company code>,"FSG settings  for posting keys have to be maintained. Make Field ""Text""as Optional field.(Tcode: OB41)",0,0,1,1,134,10
+F5,G/L account  <account number> is not defined in chart of accounts <chart of accounts>,"Create the account, define it in required Company Codes.",0,0,1,1,12,10
+F5,G/L Account <account> ist not defined in Chart of Account Chart of Account,"Account determination for tax Account keys should be configured usind dummy GL account DUMMYACDT, which is defined in A segment only.",0,0,1,1,112,10
+F5,Vendor <vendor number> has no bank details with indicator <bank ID>,"Clear Bank Details indicator BSEG-BVTYP in mapping (""Mapping Action"" = Clear)",0,0,1,1,21,10
+F5,Company code <company code> is not set up for the payment transaction,"Make sure all the Payment attributes are cleared (""Mapping Action"" = Clear)",0,0,1,1,142,10
+F5,House bank <bank id> is not defined in the paying company code <company code>,"Make sure that BSEG-HBKID, BSEG-HKTID are cleared (""Mapping Action"" = Clear)",0,0,1,1,143,10
+F5,Account  <account number> in company code <company code> is not a reconciliation account,"Need to check below 2 scenario
+1) Depending on the results of the analysis, correct the attribute ""Reconciliation Account for"" in all Company Codes (= for Chart of Account globally) or in particular ones (as exceptions)
+2) GL mapping needs to check & maintained correctly",0,0,1,1,35,10
+F5,Reconciliation account <account number> or short key <short key> is not permitted,"GL Account Mapping (Key Mapping) as well as Special GL Indicator mapping (value mapping) and Special GL configuration in CFIN System should be consistent.
+In case of Special GL posting: make sure that the GL account supplied matches with the one the system determines from the Special GL configuration.
+In case of posting with Alternative Reconciliation Account (BSEG-XHKOM=""X""), register the alternative account against customer's/vendor's ""main"" recons. account in the AP/AR configuration SPRO => Financial Accounting (New) => Accounts Receivable and Accounts Payable => Business Transactions => Postings with Alternative Reconciliation Account => Define Alternative Reconciliation Accounts",0,0,1,1,38,10
+F5,Posting keys for account determination for transaction YYY do not exist ,Posting keys maintained for all relevant keys related to concerned company codes ,0,0,1,1,146,10
+F5,Payment term XXXX not defined ,Missing payment terms defined ,0,0,1,1,147,10
+F5,For payment term X the day limit Y is not defined ,Maintain day limit for the payment term,0,0,1,1,150,10
+F5,G/L account x is not defined in company code y,Account type in trasaction FS00 Harmonised,0,0,1,1,41,10
+F5,Account x y is blocked for posting,Check of Block in GL accounts indicator is Unticked,0,0,1,1,155,10
+F5A,"Reversal not possible, accounting document for the ref. does not exist",Wait for next initial load run as it will likely get posted as soon as referenced document is successfully posted.,0,0,1,0,105,11
+F5A,Recon. acct missing for account <account number>. Enter a recon. acct in master record,Enter a Reconciliation Account in Creditors and Debitors Master Records.,0,0,1,0,106,11
+F5                  ,G/L account ** is not defined in company code **                         ,GL Mapping changed ,0,1,0,0,41,12
+FAA_POST,"Posting is not possible, old depreciation calculation not supported","Asset related fields (ANLN1, ANLN2, ANBWA, BZDAT) need to be cleared through MDG Value Mapping",0,0,1,0,114,13
+FAGL_LEDGER_CUST,Ledger group &1 not found,Table ZCFIN_MAPLDGRP need to be maintained with source company code and source ledger XX and target ledger blank and Rule 8 need to activate.,1,0,0,0,57,14
+FB,Company &1 is not defined,Need to define Trading Partner (Company),1,0,0,0,85,15
+FF,Jurisdiction code ** is not defined for calculation procedure **,Jurisdiction code mapped with defined target Jurisdiction code,0,1,0,0,25,16
+FF,System error in routine ** error code ** function builder **,Custom enhacement using BADI (badi_fins_cfin_ac_interface) and defaulted a Jurisdiction code for the postings from Atlas NA system,0,1,0,0,26,16
+FF,Company code ** requires you to enter a tax jurisdiction code,Custom enhacement using BADI (badi_fins_cfin_ac_interface) and defaulted a Jurisdiction code for the postings from Atlas NA system,0,1,0,0,27,16
+FF,Error in account determination: table ** key ** ** **,Tax Account need to be maintained ,0,1,0,0,29,16
+FF,Cannot post document: tax base in local currency is zero,Tax code not imported in system.After release we have added taxcode entries in TR and imported in system,1,0,0,0,48,16
+FF,G/L account item without tax code in document ** with deferred taxes,"In Tax code XX there was a different ""Target Tax code"" was mentioned, after removing the target tax code from FTXP & there error was resolved",1,0,0,0,60,16
+FF,** ** ** **  ( KSHCL is not equal to MWAS/MWVS ),Source and target tax code mapping wrong. Source Input tax code is mapped with target output tax code or vice versa. This can be solved by correcting mapping details.,1,0,0,0,61,16
+FF,Error in account determination: table &1 key &2 &3 &4,"check the tax code of target in ftxp whether percentage is maintained , or tax Gl is available in tax code if yes this tax code is extended in target company code level ",1,0,0,0,29,16
+FF,The tax amount must not be greater than the tax base,please check the tax code mapping and its properties if its same you need to switch off the message. ,1,0,0,0,86,16
+FF,KSCHL is not equal to MWVS,In Replication Tax Keys (00 and 99) all relevant Transaction Keys shoud be activated with 0 percentages (T code FTXP). Consider the special procedure for Tax Code Transportation  (see OSS Note : 52852).,0,0,1,0,111,16
+FF,Error in account determination: table T030R key Chart of Account ESA,(OB40) Automatic Account Determination for Transaction key (ESA). Also make sure that the Transaction Key is available in Tax Code Calculation Scheme. ,0,0,1,1,29,16
+FF,Tax code <tax code ID> does not exist in company code <company code>,Configure and activate(!) replication Tax Codes 00 & 99. Consider the special procedure for Tax Code Transportation  (see OSS Note : 52852).,0,0,1,1,133,16
+FF,Error in account determination: table T030R key Chart of Account ESA,(OB40) Automatic Account Determination for Transaction key (ESA). Also make sure that the Transaction Key is available in Tax Code Calculation Scheme. ,0,0,1,1,29,16
+FF,Condition type x tax code y does not exist ,Maintain condition records in transaction FV 11,0,0,1,1,148,16
+FF,No tax rate defined for company code ** transaction FTXP **,Maintain condition records in transaction FV 11,0,0,1,1,149,16
+FF ,Condition type MWAS tax code <tax code ID> does not exist,"Need to check below two scenario
+1) In Replication Tax Keys (00 and 99) all relevant Transaction Keys shoud be activated with 0 percentages (T code FTXP). Consider the special procedure for Tax Code Transportation  (see OSS Note : 52852).
+2) Maintain the condition record via FV11",0,0,1,1,132,17
+FH,Account &1 does not exist in company code &2,Extend the GL account to concerned company code.,1,0,0,0,104,18
+FH,Account <account number> does not exist in company code <company code>," Maintain the GL Account, in alignment with Chart of Account Team.",0,0,1,1,35,18
+FI,"No code list configured for Type **, GDT **, List-ID ** and Bus. Sys. **",Tax procedure mapping Is missing and need to map to source system procedure.,1,0,0,0,6,19
+FI,No controlling area has been assigned to company code &,Please check the company code mapping. in many cases system does'nt pick the CC mapping and its give this error.,1,0,0,0,87,19
+FICORE,Tax code ** in procedure ** is invalid,"Need to check below 2 scenario
+1) Enhanced the BAPI to update the Tax Procedure of Source system from US to USJ. After Converting it to USJ system was looking for Tax Jurisdiction code 
+2) Need to check Tax Code mapping & correct the same",0,1,0,0,22,20
+FICORE,Tax code  in procedure XXXX is invalid,Tax code changed from''OO'' to 00,0,0,1,1,22,20
+FINS_ACDOC_CUST,Default values for postings in Controlling not defined for CoCode X,Value is maintained in CFIN System as per source system cofiguration,0,0,1,1,40,21
+FINS_ACDOC_CUST     ,Default values for postings in Controlling not defined for CoCode **     ,Configuration Maintained for default value for controlling,0,1,0,0,40,22
+FINS_ACDOC_POST,"Document cannot be posted, create an incident with ref. ""&1 &2 &3 &4""",no action needed once other error is resolved this error resolve automatically,1,0,0,0,88,23
+FINS_CFIN_AC_DOC,Config. of substitution account for account ** in company code ** missing,Updated the Configuration for Substitution Account,0,1,0,0,1,24
+FINS_CFIN_AC_DOC,Value ** of type ** in field '**' could not be mapped,"Summary of All mapping errors like Cost Center, G/L account, Trading partner mapping. Resolution is to update the mappings",0,1,0,0,4,24
+FINS_CFIN_AC_DOC,Value ** of type ** in field '**' could not be mapped; see error **,"Check & Complete the missing MDG Mapping for the oject which you face the error
+For Exapmple: Company Code Mapping, Tax Code Mapping, GL Mapping & other all Mapping",1,1,1,1,4,24
+FINS_CFIN_AC_DOC,"No code list configured for Type **, GDT **, List-ID ** and Bus. Sys. **",Check & Complete the missing mapping for code list fr othe object which we face the error,1,1,1,1,6,24
+FINS_CFIN_AC_DOC,"Referenced document not yet posted (Comp.Code **, F.Year **, Document **)",Related to reversed/reversal documents. Will get auto resolved in subsequent runs.,0,1,0,0,8,24
+FINS_CFIN_AC_DOC,"Referenced invoice not yet posted (CC **, FY **, Doc. **, Item **)",Related to reversed/reversal documents. Will get auto resolved in subsequent runs.,0,1,0,0,9,24
+FINS_CFIN_AC_DOC,Internal representation for unit of measure ** does not exist,Enhanced Value mapping maintained for UOM mapping,1,1,0,1,32,24
+FINS_CFIN_AC_DOC,Config. of substitution account for account ** in company code ** missing,Substituion accounts were missing from configuration,1,0,0,0,1,24
+FINS_CFIN_AC_DOC,Internal representation for unit of measure ** does not exist,Unit of measure need to be created in system which is already mapped in system but not created in T code CUNI,1,0,0,0,32,24
+FINS_CFIN_AC_DOC,Business system for logical system &1 could not be determined,no action needed once other error is resolved this error resolve automatically,1,0,0,0,89,24
+FINS_CFIN_AC_DOC,Value &2 of type &1 in field '&3' could not be mapped; see error &4,value mapping missing ,1,0,0,0,4,24
+FINS_CFIN_AC_DOC,Value &2 of type &1 in field '&3' could not be mapped,key mapping missing ,1,0,0,0,4,24
+FINS_CFIN_AC_DOC,"No code list configured for Type &1, GDT &2, List-ID &3 and Bus. Sys. &4",Configuration done for the mapping entiry in Value Mapping.,1,0,0,0,6,24
+FINS_CFIN_AC_DOC,"Referenced invoice not yet posted (CC &1, FY &2, Doc. &3, Item &4)",no action needed once other error is resolved this error resolve automatically,1,0,0,0,9,24
+FINS_CFIN_AC_DOC,"Referenced document not yet posted (Comp.Code &1, F.Year &2, Document &3)",no action needed once other error is resolved this error resolve automatically,1,0,0,0,8,24
+FINS_CFIN_AC_DOC,"Unexpected error, clearing cannot be processed",restart the message,1,0,0,0,90,24
+FINS_CFIN_AC_DOC,Config. of substitution account for account &1 in company code &2 missing, List of GL which is in error we need to maintained in configuration of substitution path is CFINIMG->initial load->Define Clearing and Subsitution Accounts ,1,0,0,0,1,24
+FINS_CFIN_AC_DOC,Config. of substitution account for account x in <company code> missing,Maintain mapping under Financial Accounting (New)-->Central Finance-->Initial Load Settings-->Define Clearng and Substitution Accounts.,0,0,1,0,1,24
+FINS_CFIN_AC_DOC,Document was already posted with <company codes> <document number> <year>,Apply OSS Note 2225258 ,0,0,1,0,107,24
+FINS_CFIN_AC_DOC,Value <WithTaxCode> of type Withholding tax code in field 'Withholding tax code' could not be mapped; see error 020(FINS_CFIN_AC_DOC),Check and complete MDG mapping for Withholding Tax Codes (Value Mapping).,0,0,1,0,119,24
+FINS_CFIN_AC_DOC,ECS item referenced to Z001 110022918 fiscal year 2016 in system LXXXXXXXXX already exists,"For some reason couple of errors flew into ECS which is an old error handling tool (prior to AIF)
+deleted the entries from there (transaction ACC_ECS_MAINTAIN)",0,0,1,0,122,24
+FINS_CFIN_AC_DOC,Value <GL Account > of type <GL Accountr> ID (ERP) in field <GL Account> could not be mapped,Check and complete MDG mapping for GL accounts (Key Mapping).,0,0,1,1,125,24
+FINS_CFIN_AC_DOC,"Referenced invoice not yet posted (CC <company code>),<FY>, <Document Number>, Item xxx.",Wait for next initial load run as it will likely get posted as soon as referenced document is successfully posted.,0,0,1,1,126,24
+FINS_CFIN_AC_DOC,"No code list configured for Type DTEL, GDT WT_WITHCD, List-ID    FE and Bus. Sys. XXXX",Check and complete MDG mapping for Withholding Tax Codes (Value Mapping).,0,0,1,1,6,24
+FINS_CFIN_AC_DOC,Value <Vendor > of type <Vendor> ID (ERP) in field < Vendor> could not be mapped,Check and complete MDG Mapping for Vendors (Key Mapping),0,0,1,1,135,24
+FINS_CFIN_AC_DOC,Value <Customer > of type <Customer> ID (ERP) in field <Customer> could not be mapped,Check and complete MDG Mapping for Customers (Key Mapping).,0,0,1,1,136,24
+FINS_CFIN_AC_DOC,Value <GL Account > of type <GL Accountr> ID (ERP) in field <GL Account> could not be mapped,Finance GL,0,0,1,1,125,24
+FINS_CFIN_AC_DOC,Value <vendor number> of type ERP Vendor Number in field 'Vendor' could not be mapped,Complete vendor mapping,0,0,1,1,135,24
+FINS_CFIN_AC_DOC,Value <GL Account > of type <GL Accountr> ID (ERP) in field <GL Account> could not be mapped,Check and complete MDG mapping for GL accounts (Key Mapping).,0,0,1,1,125,24
+FINS_CFIN_AC_DOC,Value <Cost Element  > of type <Cost Element > ID (ERP) in field <Cost Element> could not be mapped,Check and complete MDG Mapping for Cost elements (Key Mapping).,0,0,1,1,137,24
+FINS_CFIN_AC_DOC,Value <VendorNr > of type <Cost Center> ID (ERP) in field < Vendor> could not be mapped,Check and complete MDG Mapping for Cost Centers (Key Mapping).,0,0,1,1,138,24
+FINS_CFIN_AC_DOC,Value <CoCd> of type Company Code in field 'Tax company code' could not be mapped; see error xx,Check and complete MDG Mapping for Company Codes (Key Mapping). Prerequisite: Company Code should be created in the central system with minimal configuration (T001 record is enough).,0,0,1,1,140,24
+FINS_CFIN_AC_DOC,"Referenced invoice not yet posted (CC <company code>),<FY>, <Document Number>, Item xxx.",Wait for next initial load run as it will likely get posted as soon as referenced document is successfully posted.,0,0,1,1,126,24
+FINS_CFIN_AC_DOC,"No code list configured for Type DTEL, GDT WT_WITHCD, List-ID    FE and Bus. Sys. XXXX",Check and complete MDG mapping for Withholding Tax Codes (Value Mapping).,0,0,1,1,6,24
+FINS_CFIN_AC_DOC,MDG mapping for CUSTOMER_ID Identifier 700016 is not unique,Check and correct MDG Mapping for Customer (Key Mapping).,0,0,1,1,145,24
+FINS_CFIN_AC_DOC ,"Referenced document not yet posted (Comp.Code xxxx, F.Year xxxx,<Document Number>)",Wait for next initial load run as it will likely get posted as soon as referenced document is successfully posted.,0,0,1,1,8,25
+FINS_CFIN_CO_MESSAGE,Automatic processing of cost object &1 started,"not came into active sprint, AIF related master replication issue ",1,0,0,0,91,26
+FINS_CFIN_CO_MESSAGE,Automatic processing of cost object &1 finished with errors,"not came into active sprint, AIF related master replication issue ",1,0,0,0,92,26
+FINS_CFIN_CO_MESSAGE,Cannot find assignment for source cost object &1,"not came into active sprint, AIF related master replication issue ",1,0,0,0,93,26
+FINS_CFIN_CO_MESSAGE,Object type &1 is not supported,The Mapping need to be maintain in CFINMAPOBJ table ,1,0,0,0,94,26
+FINS_CFIN_CO_MESSAGE,Cost center &1 is invalid,missing mapping or master data need to create,1,0,0,0,95,26
+FINS_CFIN_CO_MESSAGE,Activity type &1 is invalid,activity type to be created,1,0,0,0,96,26
+FINS_CFIN_CO_MESSAGE,Assignment not found for source order x from source system y,Internal created in CFIN system,0,0,1,1,153,26
+FINS_CFIN_IF_MESSAGE,Document ** Company Code ** Fiscal Year ** has the following errors:,"Summary of All Error, after resolving all Error it get Resolved Automatically ",0,1,0,0,2,27
+FINS_CFIN_IF_MESSAGE,Cross Company document with Cross-CC Number ** is missing,"These errors are due to the fact that from the Cross Company Code postings, few of the Company Codes were not in scope of the POC.  For Company codes in scope, the issues were resolved in the next initial load run",0,1,0,0,33,27
+FINS_CFIN_PS,WBS element ** not found,Custom enhacement using BADI (badi_fins_cfin_ac_interface) and maintained Mapping entries ( Internal Order/WBS/Cost Object/PM orders all mapped to Internal Orders in the target) in Custom Table,0,1,0,0,39,28
+FINS_FI_MASS_DATA,** step ** failed for work package **; try again,"Summary of All Error, after resolving all Error it get Resolved Automatically ",0,1,0,0,3,29
+FR,Payee <vendor number> is not defined for account <Vendor Number> <Company Code>,"Define ""Payee"" in Vendor Master (Payment Transactions tab -> Permitted Payees button). In the source system, analyse the Permitted Payees in vendor's master record. Maintain the values in target system, according to mapping.",0,0,1,1,124,30
+FS,Consolidated companies ** and ** are different,"For document type ""XX"" ' Inter - Company 'checkbox  in document type config(OBA7)needs to be checked if the mapping of the document type is correct",1,0,0,0,43,31
+FS,Special G/L transactions of type ** are not supported,"Direct posting with special G/L indicator ""X"" is not posssible we have to change the value mapping of Special G/L indicator ",1,0,0,0,47,31
+FS,"No taxes on sales/purch.are allowed for account ** **, ** is not allowed",Correct tax category need to be assigned in GL master ,1,0,0,0,54,31
+FS,"Only input tax is allowed for account &1 &2, &3 is not allowed",Tax category need to be change ,1,0,0,0,97,31
+FS,"Only output tax is allowed for account <account number> <year>, <tax code> is not allowed","(T Code: FS00) Change Tax Category of the GL Account to ""*"". Align with Chart of Account Team.",0,0,1,1,128,31
+FS,"Only input tax is allowed for account <account number> <company code>, <tax code> is not allowed","(T Code: FS00) Change Tax Category of the GL Account to ""*"". Align with Chart of Account Team.",0,0,1,1,128,31
+FS,"No taxes on sales/purch.are allowed for account <G/L Account> <Company Code> , <Tax Code> is not allowed","(T Code: FS00) Change Tax Category of the GL Account to ""*"". Align with Chart of Account Team.",0,0,1,1,129,31
+FS,Tax jurisdiction X has defective tax structure ,No need to maintain additonal jurisdiction codes in configuration ,0,0,1,1,151,31
+GLT0,Document splitting causes field overflow for currency type ** in row **,"This generally causes when the posted amount is vey huge in line item . This generally comes along with balancing field error and once balancing field errors resolved it solves this particular error as well. In case it is not resolved, document type need to be changed in CFIN_ACCIT with Document splitting transaction 0000 and variant 0001. Program ZCFIN_UPDATE_ACCIT to be used.",1,1,0,0,55,32
+GLT0,Document splitting causes field overflow for currency type &1 in row &2,Change the source Document type using Program ZCFIN_UPDATE_ACCIT to make it unspecified posting.,1,0,0,0,55,32
+GLT2,"Balancing field ""**"" in line item ** not filled","1. BADI ""ZCL_FINS_CFIN_AC_INTERFACE"" is used for deriving profit center. Check table ""ZCFIN_AC_RULE"" for rule used to derive PC. Check as per the roll out
+2. Default account assignment maintenance in T-code OKB9
+3. Substitution rule for default profit center",1,0,0,0,45,33
+GLT2,No accounting transaction variant assigned to **/**/**,Transaction & variant need to be maintained for document type in document splitting configuraiton,1,0,0,0,46,33
+GLT2,Item category ** not allowed in accounting transaction **/**,As per the configuration of document splitting particular item category is not allowed however same is posted in line item. In Such cases check tranaction & variant assigned to document type and same time check category assigned to GL account If there is mismatch then this needs to be corrected document splitting configuration ,1,0,0,0,52,33
+GLT2,There is no item category assigned to account &1/&2,"After activation of document splitting,Every GL account must be assigned to correct item category in document splitting configuratio. If the GL accounts are not assigned with nay cateogry then we receive this error. This can be solved by assigning cateogries to GL accounts in document splitting configuration.",1,0,0,0,98,33
+KE0C,Characteristic value ** does not exist for characteristic ** (**),Cost Center mapping updates resolved this error,0,1,0,0,13,34
+KI,Account ** requires an assignment to a CO object,"Related to open items/Balance postings of P&L Accounts. 
+Maintained OKB9 assignments",0,1,0,0,11,35
+KI,Cost element ** in CO area ** for ** cannot be posted with primary costs,GL Mappings updated (for Balance Sheet accounts & Revenue Cost Elements (CE Cat 12),0,1,0,0,23,35
+KI,"The CO account assignment object belongs to company code **, not **",Cost Center mappings corrected,0,1,0,0,28,35
+KI,Personnel number ** invalid,Mapping Action clear data maintained and rerun to resolve the error,0,1,0,0,30,35
+KI,Cost center **/** is blocked against revenue postings on **,Target Cost Center Master updated,0,1,0,0,34,35
+KI,Cost center **/** does not exist on **.,OKB9 configurations updated for the Cost Elements,0,1,0,0,37,35
+KI,Account ** requires an assignment to a CO object,"Need to check below 2 settings
+1) Check the GL mapping whether it's maintained correctly or not 
+2) If GL mapping ios correct then OKB9 Setting needs to be maintianed",1,0,0,0,11,35
+KI,Delivered/invoiced quantities cannot be updated in CO,This error is resulting due to mismatch between UOM in source document & the UOM assigned to cost object. Error can be avoided by switching off the error message,1,0,0,0,59,35
+KI,"The CO account assignment object belongs to company code &3, not &4",Maintain missing mapping  or correct the incorrect mapping in ZCFIN_MAPOBJ table.,1,0,0,0,28,35
+KI,Enter a true account assignment object with revenues,revenues posting check need to update in cost center master,1,0,0,0,99,35
+KI,Cost center &/& does not exist on &.,Maintain missing mapping for cost center.,1,0,0,0,37,35
+KI,Account <account number> requires an assignment to a CO object,Correct GL Account Master record in target system accordingly.,0,0,1,1,11,35
+KI,Cost center CFIN/x does not exist on dd.mm.yyyy.,Validity of Cost center in trasaction KS02 extended,0,0,1,1,154,35
+KI,Define a cost element category for account x (controlling area CFIN)       ,Status Cost element changed as per the source value.,0,0,1,1,157,35
+KM,Partner profit center ** does not exist for **,Configured mapping action as 'clear data' for partner profit center entity,1,0,0,0,49,36
+KM,Profit center xxxxx is locked in <controlling area>,Unlock the Profit Center,0,0,1,0,115,36
+KM,Profit center xxxxx is locked for the <date>,Unlock the Profit Center,0,0,1,0,116,36
+KO,Order ** does not exist,Custom enhacement using BADI (badi_fins_cfin_ac_interface) and maintained Mapping entries ( Internal Order/WBS/Cost Object/PM orders all mapped to Internal Orders in the target) in Custom Table,0,1,0,0,15,37
+KO,Order & does not exist,Maintain missing mapping in ZCFIN_MAPOBJ table.,1,0,0,0,15,37
+KZ,Cost object ** does not exist,Custom enhacement using BADI (badi_fins_cfin_ac_interface) and maintained Mapping entries ( Internal Order/WBS/Cost Object/PM orders all mapped to Internal Orders in the target) in Custom Table,1,1,0,0,16,38
+KZ,Cost object ** does not exist on **,Custom enhacement using BADI (badi_fins_cfin_ac_interface) and maintained Mapping entries ( Internal Order/WBS/Cost Object/PM orders all mapped to Internal Orders in the target) in Custom Table,0,1,0,0,16,38
+MDG_VALUE_MAPING_API,"Inbound mapping failed for **, value **, list ID **, agency **","This error gives the object information for which mapping needs to be maintained
+Error no: 16 & 32 comes simultaneously, so once mapping done & relaunch the initial load both error resolved",0,1,0,0,17,39
+MDG_VALUE_MAPING_API,"Inbound mapping failed for &1, value &2, list ID &3, agency &4","mapping need to check , if missing mapping is their it is to be updated ",1,0,0,0,17,39
+MDG_VALUE_MAPING_API,"Inbound mapping failed for WT_WITHCD, value 01, list ID WT_WITHCD/US XX, agency XXXXXXXXXX",Check and complete MDG mapping for Withholding Tax Codes (Value Mapping).,0,0,1,0,120,39
+MDG_VALUE_MAPING_API,"Inbound mapping failed for TXJCD, value XP1, list ID TXJCD/TAXBRA, agency XXXXXXXX",Check and complete MDG mapping for Tax Jurisdictions (Key Mapping).,0,0,1,0,121,39
+MDG_VALUE_MAPING_API,"Inbound mapping failed for BUKRS, value xxxx, list ID BUKRS, agency XXXXXXX",Check and complete MDG mapping for Company Codes (Value Mapping).,0,0,1,0,123,39
+MDG_VALUE_MAPING_API,"Inbound mapping failed for MWSKZ, value X, list ID MWSKZ/TAXUS, agency QS1CLNT100","Check and complete MDG mapping for Tax Codes (Value Mapping).
+OR
+Maintain the respective tax code mapping under both Tax Procedures",0,0,1,1,139,39
+NR,Interval ** does not exist for object ** ** **,Number range assigned to doc type needs to be maintained,1,0,0,0,44,40
+NR,Interval * does not exist for object RF_BELEG 4201 FBN1,Maintain number range Tcode FBN1 in Central Finance System,0,0,1,1,156,40
+RQ,Planning level ** does not exist,"Mapping action ""to be cleared"" maintained for Planning Levels",0,1,0,0,20,41
+RQ,Level ** does not belong to cash position (source symbol **),"Mapping action ""to be cleared"" maintained for Planning Levels",0,1,0,0,24,41
+RQ,Planning group ** not or incompletely maintained,Mapping Action clear data maintained and rerun to resolve the error,0,1,0,0,31,41
+RW,FI/CO interface: Object type ** not defined,Custom  Ref transaction key created in the Source system.,0,1,0,0,42,42
+RW,FI/CO interface: Object type TEMOD not defined,Maintain object type TEMOD in TTYP table as per source system,0,0,1,1,42,42
+SG,Enter rate ** / ** rate type ** for ** in the system settings,Exchange rate maintained in Target System,0,1,0,0,10,43
+SG,Enter rate &1 / &2 rate type &3 for &4 in the system settings,"not came into active sprint, AIF related master replication issue ",1,0,0,0,10,43
+SG,Enter rate <currency 1> / <currency 2> rate type M for <date> in the system settings,Exchange Rate configuration is imported from the Source system via ALE. ,0,0,1,1,141,43
+ZCFIN_DEV_MSG,WBS** is not mapped PSPNR**value exists in target system,This error occurs owing to incomplete mapping of Table ZCFIN_MAPOBJ. We get the source WBS Code from the individual error message. Request Onshore to share the respective Source Object Number (of Source WBS Code). Complete the mapping of these entries.,1,1,0,0,74,44
